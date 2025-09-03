@@ -7,43 +7,44 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <h1>Welcome to the AI French Poem Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter the topic of the poem"
-          autofocus
-          required
-          autocomplete="off"
-        />
+    <div class="container">
+      <header>
+        <h1>AI Poem Generator</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="What is topic of the poem"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
 
-        <input type="submit" />
+          <input type="submit" class="submit-button" />
+        </form>
 
-        <div>
+        <div class="poem">
           La tombe dit à la rose
           <br />
           Va, fleurir sur la montagne
         </div>
-      </form>
-      
-    </main>
+      </main>
 
-    <footer>
-      This was coded by
-      <a href="https://github.com/LaisZagati" target="blank">Lais Zagati </a>
-      and is an
-      <a href="https://github.com/LaisZagati/AI-Poems-Project-" target="blank"
-        >open-sourced on GitHub</a
-      >
-      and is
-      <a href="https://ai-frenchpoem-generator.netlify.app/" target="blank"
-        >hosted on Netlify</a
-      >
-    </footer>
-
+      <footer>
+        This was coded by
+        <a href="https://github.com/LaisZagati" target="blank">Lais Zagati </a>
+        and is an
+        <a href="https://github.com/LaisZagati/AI-Poems-Project-" target="blank"
+          >open-sourced on GitHub</a
+        >
+        and is
+        <a href="https://ai-frenchpoem-generator.netlify.app/" target="blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
     <script src="src/script.js"></script>
   </body>
 </html>
