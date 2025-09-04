@@ -1,26 +1,26 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background: url("haha.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    color: #333;
-    margin: 0;
-    padding: 0 20px;
-    box-sizing: border-box; 
+  font-family: "Courier New", Courier, monospace;
+  background: url("haha.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.container{
-    max-width:  600px;
-    margin: 120px auto;
+.container {
+  max-width: 600px;
+  margin: 120px auto;
 }
 
 header {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 h1 {
   color: rgb(243, 246, 243); /* bright text color */
-  background: linear-gradient(135deg, #388e3c, #43a047);;
+  background: linear-gradient(135deg, #388e3c, #43a047);
   border-radius: 25px;
   text-align: center;
   font-weight: 800;
@@ -29,14 +29,24 @@ h1 {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* adds depth for readability */
 }
 
+.form-container {
+  background-color: white;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 30px;
+  background-color: rgb(132, 216, 90);
+  border-radius: 8px;
+}
+
+.hint {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+  opacity: 0.8;
+}
 
 form {
-    padding: 30px;
-    background-color: rgb(132, 216, 90);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+  display: flex;
 }
 
 .instructions {
@@ -54,11 +64,10 @@ form {
 .instructions:hover {
   transform: scale(1.05);
   background: linear-gradient(135deg, #c5e0c6, #d6edd7);
-  color: rgb(6, 27, 5); 
-  border: none; 
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+  color: rgb(6, 27, 5);
+  border: none;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 .submit-button {
   margin-left: 10px;
@@ -86,8 +95,8 @@ form {
   padding: 20px;
   line-height: 1.8;
   border-left: 4px solid #43a047;
-  border-right:  4px solid #43a047;
-  box-shadow: 0px 12px 30px rgba(0,0,0,0.1);
+  border-right: 4px solid #43a047;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   margin-bottom: 50px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -95,7 +104,11 @@ form {
 
 .poem:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 18px 40px rgba(0,0,0,0.15);
+  box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hidden {
+  display: none;
 }
 
 a {
@@ -108,10 +121,24 @@ a:hover {
   color: #02280f;
 }
 
-
 footer {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #010101;
-    font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #010101;
+  font-size: 14px;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }

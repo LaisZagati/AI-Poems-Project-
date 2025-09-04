@@ -18,6 +18,14 @@ function generatePoem(event) {
     "You are an expert in writing funny jokes about anything and everything.Your mission is to write short and funny jokes about topic requested. Be creative and do not repeat yourself too much.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let poemElement = document.getElementById("poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `
+  <div class="generating">
+    Generating joke about ${userInstructionsInput.value}...
+  </div>
+`;
+
   // Display the generated poem
   axios.get(apiUrl).then(displayPoem);
 }
