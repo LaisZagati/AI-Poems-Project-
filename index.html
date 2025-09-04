@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Joke Generator</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>AI Golf Joke Generator</h1>
+        <h1>AI Joke Generator</h1>
       </header>
       <main>
         <form id="poem-topic-form">
           <input
             type="text"
-            placeholder="What is topic of the poem"
+            placeholder="What is topic of the joke"
             autofocus
             required
             autocomplete="off"
             class="instructions"
+            id="user-instructions"
           />
 
           <input type="submit" class="submit-button" />
