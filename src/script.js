@@ -15,9 +15,9 @@ function generatePoem(event) {
   let apiKey = "f093ocaff400a6043tff45112437b840";
   let prompt = `Generate a funny joke about any subject requested ${userInstructionsInput.value}`;
   let context =
-    "You are an expert in writing funny jokes about anything and everything.Your mission is to write short and funny jokes about topic requested. Be creative and do not repeat yourself too much.";
-  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+    "You are an expert in writing short, funny, and creative jokes about anything and everything. Your mission is to write a joke about the topic provided. Be original and avoid repeating jokes too often. Keep the joke concise and engaging";
 
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
   let poemElement = document.getElementById("poem");
   poemElement.classList.remove("hidden");
   poemElement.innerHTML = `
@@ -26,10 +26,10 @@ function generatePoem(event) {
   </div>
 `;
 
+  userInstructionsInput.value = "";
+
   // Display the generated poem
   axios.get(apiUrl).then(displayPoem);
-
-  userInstructionsInput.value = "";
 }
 
 let poemFormElement = document.getElementById("poem-topic-form");
