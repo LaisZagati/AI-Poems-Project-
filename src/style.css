@@ -1,13 +1,15 @@
 body {
   font-family: "Courier New", Courier, monospace;
-  background: url("haha.jpg");
-  background-attachment: fixed;
-  background-size: cover;
+  background: url("lol.png") no-repeat right bottom; 
+  background-size: 400px auto;  
+  background-attachment: fixed; 
   color: #333;
   margin: 0;
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+
 
 .container {
   max-width: 600px;
