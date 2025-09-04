@@ -28,6 +28,8 @@ function generatePoem(event) {
 
   // Display the generated poem
   axios.get(apiUrl).then(displayPoem);
+
+  userInstructionsInput.value = "";
 }
 
 let poemFormElement = document.getElementById("poem-topic-form");
